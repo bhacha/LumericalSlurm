@@ -15,6 +15,6 @@ module load lumerical
 
 
 #This for loop will loop over any .fsp file in the directory and assign it to FILE. The "do" line then runs lumerical on FILE
-for FILE in /home/hacha/BeamPropagation/Gaussian;
+for FILE in /home/hacha/BeamPropagation/Gaussian/*.fsp;
 do /opt/lumerical/fdtd/mpich2/nemesis/bin/mpiexec fdtd-engine-mpich2nem $FILE -nw -fullinfo;
 done
